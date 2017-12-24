@@ -12,8 +12,13 @@ import java.util.List;
 @RestController
 @RequestMapping("/api")
 public class StackOverflowController {
-    @Autowired
+
     private ProviderService providerService;
+
+    @Autowired
+    public void setProviderService(ProviderService providerService) {
+        this.providerService = providerService;
+    }
 
     @RequestMapping("/providers")
     // @ResponseBody - means that response is JSON
