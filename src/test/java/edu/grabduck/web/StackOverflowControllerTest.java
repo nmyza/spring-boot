@@ -24,11 +24,11 @@ public class StackOverflowControllerTest {
     @Test
     public void getProviders() throws Exception {
         //prepare
-        when(service.getAll()).thenReturn(ImmutableList.of());
+        when(service.findAll()).thenReturn(ImmutableList.of());
         //testing
         controller.getProviders();
         //validate
-        verify(service).getAll();
+        verify(service).findAll();
     }
 
 }

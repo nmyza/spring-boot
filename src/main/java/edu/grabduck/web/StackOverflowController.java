@@ -23,6 +23,6 @@ public class StackOverflowController {
     @RequestMapping("/providers")
     // @ResponseBody - means that response is JSON
     public List<StackOverflowWebsite> getProviders() {
-        return providerService.getAll();
+        return providerService.findAll();
     }
 }

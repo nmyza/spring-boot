@@ -6,11 +6,13 @@ import org.springframework.data.mongodb.core.mapping.Document;
 @Document
 public class StackOverflowWebsite {
     @Id
-    private final String id;
-    private final String iconImageUrl;
-    private final String website;
-    private final String title;
-    private final String description;
+    private String id;
+    private String iconImageUrl;
+    private String website;
+    private String title;
+    private String description;
+
+    public StackOverflowWebsite() {}
 
     public StackOverflowWebsite(String id, String iconImageUrl, String website, String title, String description) {
         this.id = id;
@@ -38,5 +40,25 @@ public class StackOverflowWebsite {
 
     public String getDescription() {
         return description;
+    }
+
+    public void setId(String id) {
+        this.id = id;
+    }
+
+    public void setIconImageUrl(String iconImageUrl) {
+        this.iconImageUrl = iconImageUrl;
+    }
+
+    public void setWebsite(String website) {
+        this.website = website;
+    }
+
+    public void setTitle(String title) {
+        this.title = title;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
     }
 }
